@@ -21,6 +21,7 @@ partyNullSum = 0
 partyOwner = 0
 worthyVoteTotal = 0
 
+
 for i in range(partyNum):
     name, people, vote = input().split(' ')
     getParty = party(i + 1, name, int(people), int(vote))

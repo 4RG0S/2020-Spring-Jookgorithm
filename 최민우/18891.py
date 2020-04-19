@@ -118,6 +118,7 @@ if total_to_seventeen != 17:
             if rank_seventeen[i % (party - del_num)][1] == _[1]:
                 _[4] += 1
 
+
 # 정당별로 21대 국회에서 얻은 의석 수를 의석 수를 기준으로 내림차순으로 정렬
 for i in range(party):
     total_list[i][2] += total_list[i][4]
