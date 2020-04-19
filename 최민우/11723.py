@@ -1,7 +1,9 @@
+import sys
+
 S = set()
 ALL = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20}
-for _ in range(int(input())):
-    k = input().split(' ')
+for _ in range(int(sys.stdin.readline())):
+    k = sys.stdin.readline().split()
     if len(k) == 1:
         k.append("0")
     command, x = k
@@ -9,7 +11,8 @@ for _ in range(int(input())):
     if command == "add":
         S.add(x)
     elif command == "remove":
-        S.remove(x)
+        if x in S:
+            S.remove(x)
     elif command == "check":
         print(1 if x in S else 0)
     elif command == "toggle":
@@ -20,4 +23,4 @@ for _ in range(int(input())):
     elif command == "all":
         S = ALL
     elif command == "empty":
-        S = set()
+        S.clear()
