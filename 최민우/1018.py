@@ -28,5 +28,4 @@ result = boardCount(board)
 for i in range(height - 8 + 1):
     for j in range(width - 8 + 1):
         result = min(result, boardCount(sliceBoard(j, i, board)))
-
 print(result)
