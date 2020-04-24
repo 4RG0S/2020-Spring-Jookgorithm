@@ -11,3 +11,5 @@ result = 0
 for _ in range(start, end + 1):
     result += array[_]
 print(result)
+
+#MISTAKE
