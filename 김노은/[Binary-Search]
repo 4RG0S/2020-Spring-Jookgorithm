@@ -1,0 +1,27 @@
+import sys
+def b_search(end, tree, k):
+    start = 0
+
+    while True:
+        mid = (start + end) // 2
+        check = mid
+        sum_lst = 0
+        for t_height in tree:
+            if t_height > check:
+                sum_lst += (t_height - check)
+        if sum_lst == k:
+            print(check)
+            break      
+        elif sum_lst > k:
+            if (end - start) <=1:
+                print(start)
+                break
+            else:
+                start = mid
+        else:
+            end = mid
+N, K= map(int,sys.stdin.readline().split())
+tree = list(map(int, sys.stdin.readline().split()))
+end = max(tree)
+b_search(end,tree,K)
+
